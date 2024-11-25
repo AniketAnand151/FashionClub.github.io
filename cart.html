@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Add background image to the entire body or specific section */
+        body {
+            background-image: url('cap.jpg');
+            background-size: 100% 100%; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            background-repeat: no-repeat; /* Prevent repeating the background */
+        }
+
+        /* Optionally, you can target the #cart section for specific background styling */
+        #cart {
+            background: rgba(253, 252, 252, 0.5); /* Darken the background slightly for better visibility of content */
+            padding: 20px;
+        }
+
+        /* You can adjust other sections if needed to enhance visibility over the background */
+    </style>
+</head>
+<body>
+    <section style="height: 50px !important;" id="header">
+        <a href="#"><img src="large__1.png" style="height: 35px !important;" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a  class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html ">Shop</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section style="min-height: 120vh;" id="cart" class="section-p1">
+        <h4 style="text-align: center; margin:10px; color:#E3E6f3; text-shadow: 2px 1px 3px black;">Your Cart</h4>
+        <div id="cart-container">
+            <table style="width: 80vw;">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin: 30px" id="cart-total">
+                <h3>Total: <span id="total-price">0</span></h3>
+                <a href="checkout.html" style="text-decoration:none; text-align: center; border:none; background-color:#E3E6f3; box-shadow:1px 2px 3px gray; color:black; border-radius:30px; padding:7px;cursor:pointer; display: inline-block; text-align: center;">Proceed to Checkout</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+</body>
+</html>
